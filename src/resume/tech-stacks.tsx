@@ -1,6 +1,6 @@
 import LogoLoop from "@/components/LogoLoop"
 import { Chip } from "@/components/ui/chip"
-import { useTheme } from "@/components/theme-provider"
+import { useTheme, getSystemTheme } from "@/components/theme-provider"
 import { useLayoutEffect, useMemo } from "react"
 import React from "react"
 import { getTechLogos } from "@/features/tech-stacks/constants/techLogos"
@@ -10,7 +10,9 @@ export const TechStackSection = () => {
   const [carouselWidth, setCarouselWidth] = React.useState(window.innerWidth)
   const { theme } = useTheme()
   const techLogos = useMemo(() => {
-    return getTechLogos(theme === "dark" || theme === "system")
+    return getTechLogos(
+      theme === "dark" || (theme === "system" && getSystemTheme() === "dark")
+    )
   }, [theme])
 
   useLayoutEffect(() => {
@@ -49,7 +51,10 @@ export const TechStackSection = () => {
           scaleOnHover
           fadeOut
           fadeOutColor={
-            theme === "dark" || theme === "system" ? "#121212" : "#ffffff"
+            theme === "dark" ||
+            (theme === "system" && getSystemTheme() === "dark")
+              ? "#121212"
+              : "#ffffff"
           }
           ariaLabel="Technology Stack"
           width={carouselWidth - 30}
