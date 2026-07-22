@@ -16,8 +16,21 @@ const roadmap = [
       </a>
     ),
     subTitle: "2+ years",
-    description:
-      "As a Sr. Frontend Developer, I successfully set up the project repository and initial architecture for a financing system for Amlak's employees, ensuring a solid foundation for future development",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          As a Sr. Frontend Developer, I successfully set up the project
+          repository and initial architecture for a financing system for Amlak's
+          employees, ensuring a solid foundation for future development.
+        </p>
+        <p>
+          Implemented features such as loan application, approval, and
+          disbursement processes, as well as user management and reporting
+          functionalities. Collaborated with cross-functional teams to ensure
+          seamless integration with backend services and third-party APIs.
+        </p>
+      </div>
+    ),
     tags: [
       "Sr. Frontend Dev",
       "ReactJS",
