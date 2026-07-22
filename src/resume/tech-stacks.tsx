@@ -19,7 +19,6 @@ export const TechStackSection = () => {
     const handleResize = () => {
       const logoLoopContainer = document.getElementById("logo-loop-container")
       if (logoLoopContainer) {
-        console.log("logoLoopContainer width:", logoLoopContainer.offsetWidth)
         setCarouselWidth(logoLoopContainer.offsetWidth)
       }
     }
