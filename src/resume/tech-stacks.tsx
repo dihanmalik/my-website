@@ -227,21 +227,23 @@ export const TechStackSection = () => {
           <Chip key={item}>{item}</Chip>
         ))}
       </div>
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
-        direction="left"
-        logoHeight={40}
-        gap={40}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        fadeOutColor={
-          theme === "dark" || theme === "system" ? "#121212" : "#ffffff"
-        }
-        ariaLabel="Technology Stack"
-        width={carouselWidth}
-      />
+      <div>
+        <LogoLoop
+          logos={techLogos}
+          speed={100}
+          direction="left"
+          logoHeight={40}
+          gap={40}
+          hoverSpeed={0}
+          scaleOnHover
+          fadeOut
+          fadeOutColor={
+            theme === "dark" || theme === "system" ? "#121212" : "#ffffff"
+          }
+          ariaLabel="Technology Stack"
+          width={carouselWidth - 30}
+        />
+      </div>
     </div>
   )
 }

@@ -5,14 +5,11 @@ import {
   IconPhone,
   IconBrandTiktok,
 } from "@tabler/icons-react"
-import { useTheme } from "../components/theme-provider"
 import { MyTooltip } from "@/components/ui/custom/MyTooltip"
 import BorderGlow from "@/components/BorderGlow"
 import meImage from "@/assets/me4.png"
 
 export const IntroSection = () => {
-  const { setTheme, theme } = useTheme()
-
   return (
     <div className="flex w-full flex-row flex-wrap gap-10 md:flex-nowrap md:pt-18">
       <div className="flex flex-1 flex-col items-center gap-4 md:w-[210px] md:flex-none">
@@ -30,8 +27,7 @@ export const IntroSection = () => {
           <img
             src={meImage}
             alt="Logo"
-            className="h-auto w-full grayscale-95 transition duration-300 hover:grayscale-0"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="h-auto w-full grayscale-95 transition duration-300 select-none [-webkit-user-drag:none] hover:grayscale-0"
           />
         </BorderGlow>
 

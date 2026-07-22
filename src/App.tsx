@@ -9,7 +9,7 @@ export default function App() {
     <div className="flex min-h-screen w-full flex-col items-center justify-start">
       <MyNavigation />
       <div className="row flex items-center gap-4">
-        <div className="flex w-full flex-col items-center gap-4 px-10 pt-5 pb-10 md:w-4xl">
+        <div className="flex w-full flex-col items-center gap-4 px-10 pt-5 pb-10 md:w-4xl md:p-15">
           <IntroSection />
           <WorkExperienceSection />
           <EducationSection />
