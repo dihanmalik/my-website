@@ -8,7 +8,6 @@ import {
 import { useTheme } from "../components/theme-provider"
 import { MyTooltip } from "@/components/ui/custom/MyTooltip"
 import BorderGlow from "@/components/BorderGlow"
-import { Button } from "@/components/ui/button"
 
 export const IntroSection = () => {
   const { setTheme, theme } = useTheme()

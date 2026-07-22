@@ -2,7 +2,6 @@ import { useTheme } from "@/components/theme-provider"
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
 import {

@@ -33,7 +33,7 @@ import SupabaseLogo from "@/assets/supabase.svg"
 import RenderLogo from "@/assets/render.svg"
 import RenderDarkLogo from "@/assets/render-dark.svg"
 import { useTheme } from "@/components/theme-provider"
-import { useLayoutEffect, useMemo, useRef, useState } from "react"
+import { useMemo } from "react"
 
 const TECH_STACK = [
   "TypeScript",
@@ -195,25 +195,10 @@ const getTechLogos = (isDarkMode: boolean) => [
 ]
 
 export const TechStackSection = () => {
-  const parentRef = useRef<HTMLDivElement>(null)
-  const [parentWidth, setParentWidth] = useState(0)
   const { theme } = useTheme()
   const techLogos = useMemo(() => {
     return getTechLogos(theme === "dark" || theme === "system")
   }, [theme])
-
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      // Force re-render on window resize to update the LogoLoop component
-      parentRef.current && setParentWidth(parentRef.current.offsetWidth)
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [parentRef])
 
   return (
     <div className="flex w-full flex-col gap-8 pt-18" ref={parentRef}>
