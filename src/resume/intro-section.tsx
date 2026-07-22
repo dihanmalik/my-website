@@ -14,12 +14,12 @@ export const IntroSection = () => {
     <div className="flex w-full flex-row flex-wrap gap-10 md:flex-nowrap md:pt-18">
       <div className="flex flex-1 flex-col items-center gap-4 md:w-[210px] md:flex-none">
         <BorderGlow
-          edgeSensitivity={40}
-          glowColor="40 80 80"
+          edgeSensitivity={50}
+          glowColor="20 80 80"
           backgroundColor="#120F17"
           borderRadius={0}
-          glowRadius={30}
-          glowIntensity={2}
+          glowRadius={45}
+          glowIntensity={1.5}
           coneSpread={45}
           animated
           colors={["#c084fc", "#f472b6", "#38bdf8"]}
