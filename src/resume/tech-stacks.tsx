@@ -201,7 +201,7 @@ export const TechStackSection = () => {
   }, [theme])
 
   return (
-    <div className="flex w-full flex-col gap-8 pt-18" ref={parentRef}>
+    <div className="flex w-full flex-col gap-8 pt-18">
       <h1 className="text-2xl font-bold">Tech Stack</h1>
       <div className="flex flex-row flex-wrap gap-2">
         {TECH_STACK.map((item) => (
