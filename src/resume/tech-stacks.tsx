@@ -33,7 +33,8 @@ import SupabaseLogo from "@/assets/supabase.svg"
 import RenderLogo from "@/assets/render.svg"
 import RenderDarkLogo from "@/assets/render-dark.svg"
 import { useTheme } from "@/components/theme-provider"
-import { useMemo } from "react"
+import { useLayoutEffect, useMemo } from "react"
+import React from "react"
 
 const TECH_STACK = [
   "TypeScript",
@@ -195,33 +196,52 @@ const getTechLogos = (isDarkMode: boolean) => [
 ]
 
 export const TechStackSection = () => {
+  const [carouselWidth, setCarouselWidth] = React.useState(window.innerWidth)
   const { theme } = useTheme()
   const techLogos = useMemo(() => {
     return getTechLogos(theme === "dark" || theme === "system")
   }, [theme])
 
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      const logoLoopContainer = document.getElementById("logo-loop-container")
+      if (logoLoopContainer) {
+        console.log("logoLoopContainer width:", logoLoopContainer.offsetWidth)
+        setCarouselWidth(logoLoopContainer.offsetWidth)
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+    handleResize() // Initial call to set the width
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
   return (
-    <div className="flex w-full flex-col gap-8 pt-18">
+    <div className="flex w-full flex-col gap-8 pt-18" id="logo-loop-container">
       <h1 className="text-2xl font-bold">Tech Stack</h1>
       <div className="flex flex-row flex-wrap gap-2">
         {TECH_STACK.map((item) => (
           <Chip key={item}>{item}</Chip>
         ))}
       </div>
-      <div className="sm:w-vw flex w-full flex-col gap-4">
-        <LogoLoop
-          logos={techLogos}
-          speed={100}
-          direction="left"
-          logoHeight={40}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          fadeOut
-          fadeOutColor={theme === "dark" ? "#121212" : "#ffffff"}
-          ariaLabel="Technology Stack"
-        />
-      </div>
+      <LogoLoop
+        logos={techLogos}
+        speed={100}
+        direction="left"
+        logoHeight={40}
+        gap={40}
+        hoverSpeed={0}
+        scaleOnHover
+        fadeOut
+        fadeOutColor={
+          theme === "dark" || theme === "system" ? "#121212" : "#ffffff"
+        }
+        ariaLabel="Technology Stack"
+        width={carouselWidth}
+      />
     </div>
   )
 }
