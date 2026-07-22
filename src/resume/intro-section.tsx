@@ -27,7 +27,7 @@ export const IntroSection = () => {
           <img
             src={meImage}
             alt="Logo"
-            className="h-auto w-full grayscale-95 transition duration-300 select-none [-webkit-user-drag:none] hover:grayscale-0"
+            className="h-auto w-full select-none [-webkit-user-drag:none]"
           />
         </BorderGlow>
 
