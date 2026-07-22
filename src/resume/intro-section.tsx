@@ -8,6 +8,7 @@ import {
 import { useTheme } from "../components/theme-provider"
 import { MyTooltip } from "@/components/ui/custom/MyTooltip"
 import BorderGlow from "@/components/BorderGlow"
+import meImage from "@/assets/me4.png"
 
 export const IntroSection = () => {
   const { setTheme, theme } = useTheme()
@@ -27,7 +28,7 @@ export const IntroSection = () => {
           colors={["#c084fc", "#f472b6", "#38bdf8"]}
         >
           <img
-            src="/me4.png"
+            src={meImage}
             alt="Logo"
             className="h-auto w-full grayscale-95 transition duration-300 hover:grayscale-0"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
