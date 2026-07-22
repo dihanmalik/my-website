@@ -1,0 +1,21 @@
+import { MyNavigation } from "./components/ui/custom/MyNavs"
+import { EducationSection } from "./resume/educational-bg"
+import { IntroSection } from "./resume/intro-section"
+import { TechStackSection } from "./resume/tech-stacks"
+import { WorkExperienceSection } from "./resume/work-experience"
+
+export default function App() {
+  return (
+    <div className="flex min-h-screen w-full flex-col items-center justify-start">
+      <MyNavigation />
+      <div className="row flex items-center gap-4">
+        <div className="flex w-full flex-col items-center gap-4 px-10 pt-5 pb-10 md:w-4xl">
+          <IntroSection />
+          <WorkExperienceSection />
+          <EducationSection />
+          <TechStackSection />
+        </div>
+      </div>
+    </div>
+  )
+}
