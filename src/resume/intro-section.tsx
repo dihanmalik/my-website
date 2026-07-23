@@ -11,7 +11,7 @@ import meImage from "@/assets/me4.png"
 
 export const IntroSection = () => {
   return (
-    <div className="flex w-full flex-row flex-wrap gap-10 md:flex-nowrap md:pt-18">
+    <div className="flex w-full flex-row flex-wrap gap-10 md:flex-nowrap md:pt-4">
       <div className="flex flex-1 flex-col items-center gap-4 md:w-[235px] md:flex-none">
         <BorderGlow
           edgeSensitivity={50}

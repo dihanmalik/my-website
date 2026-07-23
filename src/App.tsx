@@ -1,5 +1,6 @@
 import ClickSpark from "./components/ClickSpark"
 import { useTheme, getSystemTheme } from "./components/theme-provider"
+import { BackdropParticles } from "./components/ui/custom/BackdropParticles"
 import { MyNavigation } from "./components/ui/custom/MyNavs"
 import { EducationSection } from "./resume/educational-bg"
 import { IntroSection } from "./resume/intro-section"
@@ -21,7 +22,8 @@ export default function App() {
       sparkCount={8}
       duration={400}
     >
-      <div className="flex min-h-screen w-full flex-col items-center justify-start select-none">
+      <div className="relative flex min-h-screen w-full flex-col items-center justify-start select-none">
+        <BackdropParticles />
         <MyNavigation />
         <div className="row flex items-center gap-4">
           <div className="flex w-full flex-col items-center gap-4 px-10 pt-5 pb-10 md:w-4xl md:p-15">
