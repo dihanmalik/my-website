@@ -39,15 +39,7 @@ import DockerLogo from "@/assets/docker.svg"
 
 export const getTechLogos = (isDarkMode: boolean) => [
   { node: <ReactLogo />, title: "React", href: "https://react.dev" },
-  { node: <RedisLogo />, title: "Redis", href: "https://redis.io/" },
-  { node: <DockerLogo />, title: "Docker", href: "https://www.docker.com/" },
-  { node: <MongoDBLogo />, title: "MongoDB", href: "https://www.mongodb.com/" },
-  { node: <MySQLLogo />, title: "MySQL", href: "https://www.mysql.com/" },
-  {
-    node: <PostgreSQLLogo />,
-    title: "PostgreSQL",
-    href: "https://www.postgresql.org/",
-  },
+
   { node: <NextJSLogo />, title: "NextJS", href: "https://nextjs.org/" },
   {
     node: <TSLogo />,
@@ -178,5 +170,14 @@ export const getTechLogos = (isDarkMode: boolean) => [
     node: isDarkMode ? <RenderDarkLogo /> : <RenderLogo />,
     title: "Render",
     href: "https://render.com/",
+  },
+  { node: <RedisLogo />, title: "Redis", href: "https://redis.io/" },
+  { node: <DockerLogo />, title: "Docker", href: "https://www.docker.com/" },
+  { node: <MongoDBLogo />, title: "MongoDB", href: "https://www.mongodb.com/" },
+  { node: <MySQLLogo />, title: "MySQL", href: "https://www.mysql.com/" },
+  {
+    node: <PostgreSQLLogo />,
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org/",
   },
 ]

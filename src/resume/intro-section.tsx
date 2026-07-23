@@ -34,7 +34,7 @@ export const IntroSection = () => {
         <div className="flex flex-row justify-evenly gap-4">
           <MyTooltip content="GitHub" side="bottom">
             <a
-              className="cursor-pointer text-gray-500 hover:text-gray-800"
+              className="cursor-pointer text-gray-500 hover:text-gray-800 dark:hover:text-white"
               href="https://github.com/dihanmalik"
               target="_blank"
             >
@@ -43,7 +43,7 @@ export const IntroSection = () => {
           </MyTooltip>
           <MyTooltip content="LinkedIn" side="bottom">
             <a
-              className="cursor-pointer text-gray-500 hover:text-gray-800"
+              className="cursor-pointer text-gray-500 hover:text-gray-800 dark:hover:text-white"
               href="https://www.linkedin.com/in/abdulmaliknahid/"
               target="_blank"
             >
@@ -52,7 +52,7 @@ export const IntroSection = () => {
           </MyTooltip>
           <MyTooltip content="Gmail" side="bottom">
             <a
-              className="cursor-pointer text-gray-500 hover:text-gray-800"
+              className="cursor-pointer text-gray-500 hover:text-gray-800 dark:hover:text-white"
               href="mailto:abdulmaliknahid@gmail.com"
               target="_blank"
             >
@@ -61,7 +61,7 @@ export const IntroSection = () => {
           </MyTooltip>
           <MyTooltip content="Phone" side="bottom">
             <a
-              className="cursor-pointer text-gray-500 hover:text-gray-800"
+              className="cursor-pointer text-gray-500 hover:text-gray-800 dark:hover:text-white"
               href="tel:+639154960703"
               target="_blank"
             >
@@ -70,7 +70,7 @@ export const IntroSection = () => {
           </MyTooltip>
           <MyTooltip content="TikTok" side="bottom">
             <a
-              className="cursor-pointer text-gray-500 hover:text-gray-800"
+              className="cursor-pointer text-gray-500 hover:text-gray-800 dark:hover:text-white"
               href="https://www.tiktok.com/@dihanmalik0"
               target="_blank"
             >
